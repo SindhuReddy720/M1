@@ -10,8 +10,26 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    char ch1, ch2, ch3;
+
+    printf("Enter first character: ");
+    scanf(" %c", &ch1); 
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+    printf("Enter third character: ");
+    scanf(" %c", &ch3);
+
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 191638](https://github.com/user-attachments/assets/b542084a-e956-45a5-a3ca-d9331fe9d6c1)
 
 
 
@@ -46,8 +64,28 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int A;
+
+    printf("Enter a number: ");
+    scanf("%d", &A);
+
+    if (A > 0) {
+        printf("%d is a positive number.\n", A);
+    } else {
+        printf("%d is not a positive number.\n", A);
+    }
+
+    return 0;
+}
+```
 # OUTPUT:
+![Screenshot 2025-04-27 192242](https://github.com/user-attachments/assets/4a0cd464-f2ff-46aa-9518-37d1e9ccadff)
+
+![Screenshot 2025-04-27 193658](https://github.com/user-attachments/assets/e85dbf67-886d-4290-b121-53606e84b35d)
 
 
 
@@ -80,8 +118,32 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int num1, den1, num2, den2;
+    float fraction1, fraction2, min;
+
+    printf("Enter numerator and denominator for first fraction: ");
+    scanf("%d%d", &num1, &den1);
+
+    printf("Enter numerator and denominator for second fraction: ");
+    scanf("%d%d", &num2, &den2);
+
+    fraction1 = (float)num1 / den1;
+    fraction2 = (float)num2 / den2;
+
+    min = (fraction1 < fraction2) ? fraction1 : fraction2;
+
+    printf("The minimum fraction value is: %.2f\n", min);
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+![Screenshot 2025-04-27 192634](https://github.com/user-attachments/assets/334539d8-ec6a-464f-93e9-70197e7f6d9c)
 
 
 
@@ -111,9 +173,29 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int value;
+
+    printf("Enter a value: ");
+    scanf("%d", &value);
+
+    if (value == 1) {
+        printf("The input value is equal to 1.\n");
+    } else {
+        printf("The input value is not equal to 1.\n");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+![Screenshot 2025-04-27 192910](https://github.com/user-attachments/assets/8ae988ed-395d-4b34-bd5e-16bd8c64d09a)
 
+![Screenshot 2025-04-27 192924](https://github.com/user-attachments/assets/cf92fcf4-e147-4ae1-998b-9f29fed9e4e4)
 
 
 
@@ -147,8 +229,51 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int m1, m2, m3;
+    float tot, per;
+
+    printf("Enter marks for subject 1: ");
+    scanf("%d", &m1);
+    printf("Enter marks for subject 2: ");
+    scanf("%d", &m2);
+    printf("Enter marks for subject 3: ");
+    scanf("%d", &m3);
+
+    tot = m1 + m2 + m3;
+
+    per = tot / 3;
+
+    printf("Total Marks = %.2f\n", tot);
+    printf("Percentage = %.2f%%\n", per);
+
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60) {
+            printf("Division = First\n");
+        }
+        else if (per >= 48) {
+            printf("Division = Second\n");
+        }
+        else if (per >= 36) {
+            printf("Division = Pass\n");
+        }
+        else {
+            printf("Division = Fail\n"); 
+        }
+    }
+    else {
+        printf("Division = Fail\n");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+![Screenshot 2025-04-27 193420](https://github.com/user-attachments/assets/0c3b4f5e-88d6-46ab-918a-e77ec389cd82)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
